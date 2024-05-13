@@ -13,9 +13,9 @@
 		851E58762BF28819003F478E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851E58752BF28819003F478E /* Preview Assets.xcassets */; };
 		851E58782BF28819003F478E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58772BF28819003F478E /* Persistence.swift */; };
 		851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 851E58792BF28819003F478E /* KeyboardKitDemo.xcdatamodeld */; };
-		851E58832BF2956C003F478E /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 851E58822BF2956C003F478E /* KeyboardKit */; };
 		851E588B2BF295B4003F478E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E588A2BF295B4003F478E /* KeyboardViewController.swift */; };
 		851E588F2BF295B4003F478E /* KeyboardDemo.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 851E58882BF295B4003F478E /* KeyboardDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		851E58982BF29844003F478E /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 851E58972BF29844003F478E /* KeyboardKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851E58832BF2956C003F478E /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851E58982BF29844003F478E /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,6 @@
 			);
 			name = KeyboardKitDemo;
 			packageProductDependencies = (
-				851E58822BF2956C003F478E /* KeyboardKit */,
 			);
 			productName = KeyboardKitDemo;
 			productReference = 851E586B2BF28818003F478E /* KeyboardKitDemo.app */;
@@ -160,6 +159,9 @@
 			dependencies = (
 			);
 			name = KeyboardDemo;
+			packageProductDependencies = (
+				851E58972BF29844003F478E /* KeyboardKit */,
+			);
 			productName = KeyboardDemo;
 			productReference = 851E58882BF295B4003F478E /* KeyboardDemo.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -192,7 +194,7 @@
 			);
 			mainGroup = 851E58622BF28818003F478E;
 			packageReferences = (
-				851E58812BF2956C003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				851E58962BF29844003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 			);
 			productRefGroup = 851E586C2BF28818003F478E /* Products */;
 			projectDirPath = "";
@@ -516,7 +518,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		851E58812BF2956C003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+		851E58962BF29844003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit";
 			requirement = {
@@ -527,9 +529,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		851E58822BF2956C003F478E /* KeyboardKit */ = {
+		851E58972BF29844003F478E /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 851E58812BF2956C003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			package = 851E58962BF29844003F478E /* XCRemoteSwiftPackageReference "KeyboardKit" */;
 			productName = KeyboardKit;
 		};
 /* End XCSwiftPackageProductDependency section */
