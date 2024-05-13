@@ -9,12 +9,11 @@ import UIKit
 import KeyboardKit
 import SwiftUI
 
-
 class KeyboardViewController: UIInputViewController {
 
     var contentView: some View {
-        SwiftUIKeyboardView()
-        .environmentObject(TextInserter(proxy: self.textDocumentProxy))
+        SwiftUIKeyboardView(uiInputViewController: self)
+            .environmentObject(TextInserter(proxy: self.textDocumentProxy))
     }
     
     override func viewDidLoad() {
@@ -31,25 +30,71 @@ class KeyboardViewController: UIInputViewController {
     }
 }
 
+
+
+class KeyboardInputViewControllerAdapter: KeyboardInputViewController {
+    private let uiInputViewController: UIInputViewController
+    
+    init(uiInputViewController: UIInputViewController) {
+        self.uiInputViewController = uiInputViewController
+        super.init(nibName: nil, bundle: nil)
+        self.state.setup(for: self)
+        self.services.setup(for: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override var textDocumentProxy: UITextDocumentProxy {
+        return uiInputViewController.textDocumentProxy
+    }
+    
+    // Override necessary methods to handle text input actions
+    override func insertText(_ text: String) {
+        uiInputViewController.textDocumentProxy.insertText(text)
+    }
+    
+    override func deleteBackward() {
+        uiInputViewController.textDocumentProxy.deleteBackward()
+    }
+    
+    override func adjustTextPosition(by offset: Int) {
+        uiInputViewController.textDocumentProxy.adjustTextPosition(byCharacterOffset: offset)
+    }
+}
+
 struct SwiftUIKeyboardView: View {
     @State private var customKeyboard = true
     @EnvironmentObject var textInserter: TextInserter
+    var uiInputViewController: UIInputViewController
 
     var body: some View {
-        
-        if customKeyboard{
+        if customKeyboard {
             PhraseKeyboardView {
                 customKeyboard.toggle()
             }
             .environmentObject(textInserter)
-            
         } else {
-            Button("Switch"){
-                customKeyboard.toggle()
-            }
+            let adapter = KeyboardInputViewControllerAdapter(uiInputViewController: uiInputViewController)
+            SystemKeyboard(
+                state: adapter.state,
+                services: adapter.services,
+                renderBackground: true,
+                buttonContent: { $0.view },
+                buttonView: { $0.view },
+                emojiKeyboard: { $0.view },
+                toolbar: { _ in
+                    Button("Switch") {
+                        customKeyboard.toggle()
+                    }
+                }
+            )
         }
     }
 }
+
+
 
 
 struct PhraseKeyboardView: View {
