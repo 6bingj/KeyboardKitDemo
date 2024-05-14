@@ -2,18 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>StringsTable</key>
-	<string>Root</string>
-	<key>PreferenceSpecifiers</key>
-	<array>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>FooterText</key>
-			<string>Please turn on Keyboards - KeyboardDemo to use Networking Keys</string>
-			<key>Title</key>
-			<string></string>
-		</dict>
-	</array>
+    <key>StringsTable</key>
+    <string>Root</string>
+    <key>PreferenceSpecifiers</key>
+    <array>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupSpecifier</string>
+            <key>FooterText</key>
+            <string>
+Please turn on Keyboards - KeyboardDemo to use the keyboard.
+    
+💡 If &quot;Keyboards&quot; is not displayed on this page:
+① Please switch to the App Switcher, find &quot;Settings&quot; and swipe up to force quit.
+② Re-open the keyboard main app and tap &quot;Enable Keyboard in Settings&quot; again. After entering, click &quot;Keyboards&quot;
+③Enable &quot;KeyboardDemo&quot;
+            </string>
+            <key>Title</key>
+            <string></string>
+        </dict>
+    </array>
 </dict>
 </plist>

@@ -27,6 +27,7 @@
 		851E58B42BF33CBC003F478E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 851E58B32BF33CBC003F478E /* Settings.bundle */; };
 		851E58B72BF3439B003F478E /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58B62BF3439B003F478E /* HeroView.swift */; };
 		851E58B82BF3439B003F478E /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58B62BF3439B003F478E /* HeroView.swift */; };
+		851E58BA2BF34DF7003F478E /* OperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58B92BF34DF7003F478E /* OperationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		851E58B12BF3235E003F478E /* KeyboardDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDemo.entitlements; sourceTree = "<group>"; };
 		851E58B32BF33CBC003F478E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		851E58B62BF3439B003F478E /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		851E58B92BF34DF7003F478E /* OperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				851E58702BF28818003F478E /* ContentView.swift */,
 				851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */,
 				851E58B62BF3439B003F478E /* HeroView.swift */,
+				851E58B92BF34DF7003F478E /* OperationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				851E58AC2BF31C3B003F478E /* SnippetEditorView.swift in Sources */,
 				851E58712BF28818003F478E /* ContentView.swift in Sources */,
 				851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */,
+				851E58BA2BF34DF7003F478E /* OperationView.swift in Sources */,
 				851E586F2BF28818003F478E /* KeyboardKitDemoApp.swift in Sources */,
 				851E58A32BF2EE62003F478E /* SettingStore.swift in Sources */,
 			);

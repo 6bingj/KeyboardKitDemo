@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
     var body: some View {
@@ -15,14 +14,7 @@ struct ContentView: View {
                 
                 HeroView()
                 
-                Section{
-                    Button {
-                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-                    } label: {
-                        Label("Enable Keyboard in Settings", systemImage: "gear")
-                            .bold()
-                    }
-                }
+                OperationView()
                 
                 SnippetEditorView()
                     .navigationTitle("Networking Keyboard")
