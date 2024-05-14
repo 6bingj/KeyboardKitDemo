@@ -22,7 +22,7 @@ class SettingStore: ObservableObject {
 //        }
 //    }
 
-    @AppStorage("email", store: UserDefaults(suiteName: "group.page.bingjian.KeyboardDemo")) var email: String = "Bingjianliu11@gmail.com"
+    @AppStorage("email", store: UserDefaults(suiteName: "group.page.bingjian.KeyboardDemo")) var email: String = "calmer-04.flipper@icloud.com"
     @AppStorage("portfolio", store: UserDefaults(suiteName: "group.page.bingjian.KeyboardDemo")) var portfolio: String = "https://bingjian.page/"
     @AppStorage("linkedin", store: UserDefaults(suiteName: "group.page.bingjian.KeyboardDemo")) var linkedIn: String = "https://www.linkedin.com/in/bingjian-liu"
     @AppStorage("message", store: UserDefaults(suiteName: "group.page.bingjian.KeyboardDemo")) var message: String = "Hi, I came across your profile on LinkedIn and found your background very interesting.  I'm always looking to connect with professionals in various fields to expand my network and learn new things. Would you be open to connecting and potentially having a brief conversation sometime?"
