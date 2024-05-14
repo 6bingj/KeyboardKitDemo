@@ -25,7 +25,14 @@ struct KeyboardToolbar: View {
     
     @ViewBuilder var regularToolbar: some View {
         HStack {
+            Text("Start Networking!")
+                .font(.subheadline)
+                .bold()
+                .opacity(0.5)
+                .padding()
+                .minimumScaleFactor(0.5)
             
+
             Spacer()
             
             toolbarButton("Snippet Keyboard", systemImage: "tray", {
@@ -93,6 +100,7 @@ struct KeyboardToolbar: View {
         Button(action: action) {
             Label(title, systemImage: systemImage)
                 .padding(10)
+                .foregroundStyle(Color.gray)
 //                .background(Circle().fill(Color.gray))
 //                .foregroundColor(.white)
         }

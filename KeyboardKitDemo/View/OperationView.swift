@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OperationView: View {
     
-    @State private var testText: String = "Hi Andy, I came across your profile on LinkedIn, and I would like to share with you my portfolio:"
+    @State private var testText: String = "Hi, I came across your profile on LinkedIn, and I would like to share with you my portfolio:"
     
     var body: some View {
         
@@ -18,18 +18,25 @@ struct OperationView: View {
             Button {
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             } label: {
-                Label("Enable Keyboard in Settings", systemImage: "gear")
+                HStack {
+                    Label("Step 1: Enable Keyboard in Settings", systemImage: "gear")
+//                    Spacer()
+//                    Image(systemName: "chevron.forward")
+//                        .font(.subheadline)
+                }
             }
             
             NavigationLink {
                 VStack {
-                    Text("Try finish this:")
+                    Text("Try finish this message with the Networking Keyboard. Tap the tray icon to start inserting snippets.")
+                        .font(.headline)
                     TextEditor(text: $testText)
-                        .border(Color.gray, width: 1)
-                    .padding()
+                        .border(Color.gray.opacity(0.5), width: 1)
+//                    .padding()
                 }
+                .padding()
             } label: {
-                Label("Try type something", systemImage: "list.clipboard.fill")
+                Label("Step 2: Try Write Something", systemImage: "list.clipboard.fill")
             }
 
         }
@@ -39,9 +46,10 @@ struct OperationView: View {
 }
 
 #Preview {
-    NavigationStack {
-        List {
-            OperationView()
-        }
-    }
+//    NavigationStack {
+//        List {
+//            OperationView()
+//        }
+//    }
+    ContentView()
 }

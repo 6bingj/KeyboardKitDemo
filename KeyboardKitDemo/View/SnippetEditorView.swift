@@ -10,7 +10,19 @@ import SwiftUI
 struct SnippetEditorView: View {
     
     var body: some View {
-        Section(header: Text("Edit Snippets")) {
+        Section(/*header: Text("Edit Snippets")*/) {
+            
+            HStack {
+//                Spacer()
+                Image(systemName: "tray.circle.fill")
+                    .font(.title)
+                    .padding(.trailing,2)
+                Text("Edit Snippets")
+                    .font(.headline)
+                    .padding(.vertical)
+//                Spacer()
+            }
+            
             SnippetEditField(snippetType: .portfolio)
             SnippetEditField(snippetType: .email)
             SnippetEditField(snippetType: .linkedin)
@@ -27,11 +39,11 @@ struct SnippetEditField: View {
     var body: some View {
         VStack(alignment: .leading) {
             Label(snippetType.title, systemImage: snippetType.systemImage)
-            .font(.headline)
-            .foregroundStyle(.primary)
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
             TextField(snippetType.title, text: binding(for: snippetType),axis: .vertical)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.bottom, 10)
+                .padding(.bottom, 20)
         }
     }
 

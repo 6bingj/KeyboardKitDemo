@@ -18,6 +18,7 @@ struct AIImprovementDemo: View {
                     dismiss()
                 } label: {
                     Label("dismiss", systemImage: "chevron.down.square.fill")
+                        .padding()
                 }
             }
             
