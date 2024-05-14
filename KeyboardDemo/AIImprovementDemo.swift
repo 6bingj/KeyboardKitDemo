@@ -23,10 +23,6 @@ struct AIImprovementDemo: View {
             
             Spacer()
             
-            HStack {
-                
-            }
-            
         }
     }
 }

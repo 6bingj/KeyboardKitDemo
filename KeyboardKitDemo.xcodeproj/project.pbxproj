@@ -23,6 +23,7 @@
 		851E58A42BF2FAA3003F478E /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A22BF2EE62003F478E /* SettingStore.swift */; };
 		851E58A92BF3153C003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
 		851E58AA2BF31563003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
+		851E58AC2BF31C3B003F478E /* SnippetEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,9 @@
 		851E58A22BF2EE62003F478E /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		851E58A72BF31258003F478E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		851E58A82BF3153C003F478E /* SnippetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetType.swift; sourceTree = "<group>"; };
+		851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetEditorView.swift; sourceTree = "<group>"; };
+		851E58B02BF3231C003F478E /* KeyboardKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardKitDemo.entitlements; sourceTree = "<group>"; };
+		851E58B12BF3235E003F478E /* KeyboardDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		851E586D2BF28818003F478E /* KeyboardKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				851E58B02BF3231C003F478E /* KeyboardKitDemo.entitlements */,
 				851E58A72BF31258003F478E /* Info.plist */,
 				851E589D2BF2CE52003F478E /* View */,
 				851E589C2BF2CE47003F478E /* Model */,
@@ -130,6 +135,7 @@
 		851E58892BF295B4003F478E /* KeyboardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				851E58B12BF3235E003F478E /* KeyboardDemo.entitlements */,
 				851E588A2BF295B4003F478E /* KeyboardViewController.swift */,
 				851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */,
 				851E589A2BF2C73F003F478E /* AIImprovementDemo.swift */,
@@ -153,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				851E58702BF28818003F478E /* ContentView.swift */,
+				851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 			files = (
 				851E58A92BF3153C003F478E /* SnippetType.swift in Sources */,
 				851E58782BF28819003F478E /* Persistence.swift in Sources */,
+				851E58AC2BF31C3B003F478E /* SnippetEditorView.swift in Sources */,
 				851E58712BF28818003F478E /* ContentView.swift in Sources */,
 				851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */,
 				851E586F2BF28818003F478E /* KeyboardKitDemoApp.swift in Sources */,
@@ -423,6 +431,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardKitDemo/KeyboardKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KeyboardKitDemo/Preview Content\"";
@@ -454,6 +463,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardKitDemo/KeyboardKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KeyboardKitDemo/Preview Content\"";
@@ -482,6 +492,7 @@
 		851E58912BF295B4003F478E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyboardDemo/KeyboardDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J32A3JFN84;
@@ -507,6 +518,7 @@
 		851E58922BF295B4003F478E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyboardDemo/KeyboardDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J32A3JFN84;

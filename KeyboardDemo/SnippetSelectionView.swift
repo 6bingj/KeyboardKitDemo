@@ -10,7 +10,8 @@ import SwiftUI
 struct SnippetSelectionView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var textInserter: TextInserter
-    
+//    @ObservedObject private var settings = SettingStore.shared
+
     var body: some View {
         VStack{
             
@@ -19,9 +20,9 @@ struct SnippetSelectionView: View {
             Spacer()
                     
             List {
-                snippetButton(SnippetType.linkedin)
-                snippetButton(SnippetType.email)
                 snippetButton(SnippetType.portfolio)
+                snippetButton(SnippetType.email)
+                snippetButton(SnippetType.linkedin)
                 snippetButton(SnippetType.message)
 
             }
@@ -34,7 +35,7 @@ struct SnippetSelectionView: View {
     }
     
     @ViewBuilder var headerView: some View {
-        HStack{
+        HStack(alignment:.top){
             
             Link(destination: URL(string: "keyboarddemo://launch")!) {
                 Label("Edit", systemImage: "gearshape.fill")
@@ -43,7 +44,7 @@ struct SnippetSelectionView: View {
             
             Spacer()
             
-            Text("Select a snippet to insert to your text:")
+            Text("Select a snippet to insert to your text")
                 .font(.footnote)
             
             Spacer()
