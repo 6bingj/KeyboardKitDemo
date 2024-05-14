@@ -62,10 +62,11 @@ struct SnippetSelectionView: View {
         .padding()
     }
     
-    
+
     func snippetButton(_ snippet: SnippetType) -> some View {
         Button {
             textInserter.insertText(snippet.content)
+            UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
         } label: {
             HStack(alignment:.top) {
                 HStack{

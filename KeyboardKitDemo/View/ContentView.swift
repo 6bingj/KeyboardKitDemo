@@ -12,8 +12,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
+                
+                HeroView()
+                
+                Section{
+                    Button {
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                    } label: {
+                        Label("Enable Keyboard in Settings", systemImage: "gear")
+                            .bold()
+                    }
+                }
+                
                 SnippetEditorView()
-                    .navigationTitle("Networking Keys")
+                    .navigationTitle("Networking Keyboard")
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

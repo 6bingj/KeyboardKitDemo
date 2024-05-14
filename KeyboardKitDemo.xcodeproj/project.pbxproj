@@ -24,6 +24,9 @@
 		851E58A92BF3153C003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
 		851E58AA2BF31563003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
 		851E58AC2BF31C3B003F478E /* SnippetEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */; };
+		851E58B42BF33CBC003F478E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 851E58B32BF33CBC003F478E /* Settings.bundle */; };
+		851E58B72BF3439B003F478E /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58B62BF3439B003F478E /* HeroView.swift */; };
+		851E58B82BF3439B003F478E /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58B62BF3439B003F478E /* HeroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,8 @@
 		851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetEditorView.swift; sourceTree = "<group>"; };
 		851E58B02BF3231C003F478E /* KeyboardKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardKitDemo.entitlements; sourceTree = "<group>"; };
 		851E58B12BF3235E003F478E /* KeyboardDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardDemo.entitlements; sourceTree = "<group>"; };
+		851E58B32BF33CBC003F478E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		851E58B62BF3439B003F478E /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 			children = (
 				851E58B02BF3231C003F478E /* KeyboardKitDemo.entitlements */,
 				851E58A72BF31258003F478E /* Info.plist */,
+				851E58B32BF33CBC003F478E /* Settings.bundle */,
 				851E589D2BF2CE52003F478E /* View */,
 				851E589C2BF2CE47003F478E /* Model */,
 				851E586E2BF28818003F478E /* KeyboardKitDemoApp.swift */,
@@ -160,6 +166,7 @@
 			children = (
 				851E58702BF28818003F478E /* ContentView.swift */,
 				851E58AB2BF31C3B003F478E /* SnippetEditorView.swift */,
+				851E58B62BF3439B003F478E /* HeroView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				851E58762BF28819003F478E /* Preview Assets.xcassets in Resources */,
+				851E58B42BF33CBC003F478E /* Settings.bundle in Resources */,
 				851E58732BF28819003F478E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +282,7 @@
 			files = (
 				851E58A92BF3153C003F478E /* SnippetType.swift in Sources */,
 				851E58782BF28819003F478E /* Persistence.swift in Sources */,
+				851E58B72BF3439B003F478E /* HeroView.swift in Sources */,
 				851E58AC2BF31C3B003F478E /* SnippetEditorView.swift in Sources */,
 				851E58712BF28818003F478E /* ContentView.swift in Sources */,
 				851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */,
@@ -291,6 +300,7 @@
 				851E58A12BF2DA5A003F478E /* SnippetSelectionView.swift in Sources */,
 				851E589F2BF2DA0C003F478E /* KeyboardToolbar.swift in Sources */,
 				851E589B2BF2C73F003F478E /* AIImprovementDemo.swift in Sources */,
+				851E58B82BF3439B003F478E /* HeroView.swift in Sources */,
 				851E58AA2BF31563003F478E /* SnippetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +449,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KeyboardKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkingKeys;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -471,6 +482,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KeyboardKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkingKeys;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
