@@ -20,6 +20,9 @@
 		851E589F2BF2DA0C003F478E /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */; };
 		851E58A12BF2DA5A003F478E /* SnippetSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A02BF2DA5A003F478E /* SnippetSelectionView.swift */; };
 		851E58A32BF2EE62003F478E /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A22BF2EE62003F478E /* SettingStore.swift */; };
+		851E58A42BF2FAA3003F478E /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A22BF2EE62003F478E /* SettingStore.swift */; };
+		851E58A92BF3153C003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
+		851E58AA2BF31563003F478E /* SnippetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A82BF3153C003F478E /* SnippetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,8 @@
 		851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
 		851E58A02BF2DA5A003F478E /* SnippetSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetSelectionView.swift; sourceTree = "<group>"; };
 		851E58A22BF2EE62003F478E /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
+		851E58A72BF31258003F478E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		851E58A82BF3153C003F478E /* SnippetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 		851E586D2BF28818003F478E /* KeyboardKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				851E58A72BF31258003F478E /* Info.plist */,
 				851E589D2BF2CE52003F478E /* View */,
 				851E589C2BF2CE47003F478E /* Model */,
 				851E586E2BF28818003F478E /* KeyboardKitDemoApp.swift */,
@@ -138,6 +144,7 @@
 			children = (
 				851E58772BF28819003F478E /* Persistence.swift */,
 				851E58A22BF2EE62003F478E /* SettingStore.swift */,
+				851E58A82BF3153C003F478E /* SnippetType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851E58A92BF3153C003F478E /* SnippetType.swift in Sources */,
 				851E58782BF28819003F478E /* Persistence.swift in Sources */,
 				851E58712BF28818003F478E /* ContentView.swift in Sources */,
 				851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */,
@@ -271,9 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				851E588B2BF295B4003F478E /* KeyboardViewController.swift in Sources */,
+				851E58A42BF2FAA3003F478E /* SettingStore.swift in Sources */,
 				851E58A12BF2DA5A003F478E /* SnippetSelectionView.swift in Sources */,
 				851E589F2BF2DA0C003F478E /* KeyboardToolbar.swift in Sources */,
 				851E589B2BF2C73F003F478E /* AIImprovementDemo.swift in Sources */,
+				851E58AA2BF31563003F478E /* SnippetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +429,7 @@
 				DEVELOPMENT_TEAM = J32A3JFN84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeyboardKitDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +460,7 @@
 				DEVELOPMENT_TEAM = J32A3JFN84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeyboardKitDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

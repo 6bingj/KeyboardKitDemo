@@ -13,47 +13,81 @@ struct SnippetSelectionView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Button {
-                    dismiss()
-                } label: {
-                    Label("dismiss", systemImage: "chevron.down.square.fill")
-                }
-            }
-            .padding()
+            
+            headerView
             
             Spacer()
-                        
-            let email = "bingjianliu11@gmail.com"
-            let linkedIn = "https://www.linkedin.com/in/bingjian-liu"
-            
-            
-            List {
-                VStack {
-                    Link("Learn SwiftUI", destination: URL(string: "https://www.hackingwithswift.com/quick-start/swiftui")!)
                     
-                    snippetButton(title: "linkedIn", content: linkedIn)
-                    snippetButton(title: "email", content: email)
+            List {
+                snippetButton(SnippetType.linkedin)
+                snippetButton(SnippetType.email)
+                snippetButton(SnippetType.portfolio)
+                snippetButton(SnippetType.message)
 
-                }
-                .buttonStyle(.borderless)
             }
+            .buttonStyle(.borderless)
             .listStyle(.plain)
             
         }
+        .tint(.secondary)
+        
     }
     
-    func snippetButton (
-        title: String,
-        content: String
-    ) -> some View {
-        Button {
-            textInserter.insertText(content)
-        } label: {
-            Text(title+": "+content)
+    @ViewBuilder var headerView: some View {
+        HStack{
+            
+            Link(destination: URL(string: "keyboarddemo://launch")!) {
+                Label("Edit", systemImage: "gearshape.fill")
+                    .labelStyle(.iconOnly)
+            }
+            
+            Spacer()
+            
+            Text("Select a snippet to insert to your text:")
+                .font(.footnote)
+            
+            Spacer()
+            
+            Button {
+                dismiss()
+            } label: {
+                Label("dismiss", systemImage: "chevron.down")
+                    .labelStyle(.iconOnly)
+                    .padding(10)
+                    .background(Circle().fill(Color.gray))
+                    .foregroundColor(.white)
+            }
         }
-
+        .padding()
+    }
+    
+    
+    func snippetButton(_ snippet: SnippetType) -> some View {
+        Button {
+            textInserter.insertText(snippet.content)
+        } label: {
+            HStack(alignment:.top) {
+                HStack{
+                    Image(systemName:snippet.systemImage)
+                        .foregroundStyle(.primary)
+                    Text(snippet.title)
+                        .foregroundStyle(.primary)
+                        .font(.subheadline)
+                    Spacer()
+                }
+                .frame(width: 150)
+                
+                
+                Text(snippet.content)
+                    .font(.footnote)
+                    .lineLimit(4)
+                    .truncationMode(.tail)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                
+            }
+        }
+        
     }
     
 }
@@ -69,3 +103,4 @@ class TextInserter: ObservableObject {
         textDocumentProxy?.insertText(text)
     }
 }
+
