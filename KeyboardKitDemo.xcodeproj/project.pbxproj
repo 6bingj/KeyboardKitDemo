@@ -16,6 +16,10 @@
 		851E588B2BF295B4003F478E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E588A2BF295B4003F478E /* KeyboardViewController.swift */; };
 		851E588F2BF295B4003F478E /* KeyboardDemo.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 851E58882BF295B4003F478E /* KeyboardDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		851E58982BF29844003F478E /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 851E58972BF29844003F478E /* KeyboardKit */; };
+		851E589B2BF2C73F003F478E /* AIImprovementDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E589A2BF2C73F003F478E /* AIImprovementDemo.swift */; };
+		851E589F2BF2DA0C003F478E /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */; };
+		851E58A12BF2DA5A003F478E /* SnippetSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A02BF2DA5A003F478E /* SnippetSelectionView.swift */; };
+		851E58A32BF2EE62003F478E /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E58A22BF2EE62003F478E /* SettingStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		851E58882BF295B4003F478E /* KeyboardDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		851E588A2BF295B4003F478E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		851E588C2BF295B4003F478E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851E589A2BF2C73F003F478E /* AIImprovementDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIImprovementDemo.swift; sourceTree = "<group>"; };
+		851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
+		851E58A02BF2DA5A003F478E /* SnippetSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetSelectionView.swift; sourceTree = "<group>"; };
+		851E58A22BF2EE62003F478E /* SettingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +103,10 @@
 		851E586D2BF28818003F478E /* KeyboardKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				851E589D2BF2CE52003F478E /* View */,
+				851E589C2BF2CE47003F478E /* Model */,
 				851E586E2BF28818003F478E /* KeyboardKitDemoApp.swift */,
-				851E58702BF28818003F478E /* ContentView.swift */,
 				851E58722BF28819003F478E /* Assets.xcassets */,
-				851E58772BF28819003F478E /* Persistence.swift */,
 				851E58792BF28819003F478E /* KeyboardKitDemo.xcdatamodeld */,
 				851E58742BF28819003F478E /* Preview Content */,
 			);
@@ -117,9 +125,29 @@
 			isa = PBXGroup;
 			children = (
 				851E588A2BF295B4003F478E /* KeyboardViewController.swift */,
+				851E589E2BF2DA0C003F478E /* KeyboardToolbar.swift */,
+				851E589A2BF2C73F003F478E /* AIImprovementDemo.swift */,
+				851E58A02BF2DA5A003F478E /* SnippetSelectionView.swift */,
 				851E588C2BF295B4003F478E /* Info.plist */,
 			);
 			path = KeyboardDemo;
+			sourceTree = "<group>";
+		};
+		851E589C2BF2CE47003F478E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				851E58772BF28819003F478E /* Persistence.swift */,
+				851E58A22BF2EE62003F478E /* SettingStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		851E589D2BF2CE52003F478E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				851E58702BF28818003F478E /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +262,7 @@
 				851E58712BF28818003F478E /* ContentView.swift in Sources */,
 				851E587B2BF28819003F478E /* KeyboardKitDemo.xcdatamodeld in Sources */,
 				851E586F2BF28818003F478E /* KeyboardKitDemoApp.swift in Sources */,
+				851E58A32BF2EE62003F478E /* SettingStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				851E588B2BF295B4003F478E /* KeyboardViewController.swift in Sources */,
+				851E58A12BF2DA5A003F478E /* SnippetSelectionView.swift in Sources */,
+				851E589F2BF2DA0C003F478E /* KeyboardToolbar.swift in Sources */,
+				851E589B2BF2C73F003F478E /* AIImprovementDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

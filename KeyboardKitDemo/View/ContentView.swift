@@ -19,6 +19,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                Label("Snippet Keyboard", systemImage: "tray")
+                       .labelStyle(.iconOnly)
+                       .padding(10)
+                       .background(Circle().fill(Color.gray))
+                       .foregroundColor(.white)
+                
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")

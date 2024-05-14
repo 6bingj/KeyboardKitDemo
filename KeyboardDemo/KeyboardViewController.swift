@@ -12,8 +12,8 @@ import SwiftUI
 class KeyboardViewController: KeyboardInputViewController {
     override func viewWillSetupKeyboard() {
         super.viewWillSetupKeyboard()
-
-        /// Make the demo use a standard ``SystemKeyboard``.
+        
+        ///Use a standard ``SystemKeyboard``
         setup { controller in
             SystemKeyboard(
                 state: controller.state,
@@ -23,21 +23,10 @@ class KeyboardViewController: KeyboardInputViewController {
                 emojiKeyboard: { $0.view },
                 toolbar: { _ in
                     KeyboardToolbar()
+                        .environmentObject(TextInserter(proxy: self.textDocumentProxy))
                 }
             )
         }
     }
 }
 
-struct KeyboardToolbar: View {
-    @State private var testSheet = false
-    
-    var body: some View {
-        Button("test"){
-            testSheet.toggle()
-        }
-        .sheet(isPresented: $testSheet) {
-            Text("test")
-        }
-    }
-}
