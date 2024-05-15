@@ -8,19 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("displayOnboarding") var displayOnboarding: Bool = true
+
     var body: some View {
         NavigationView {
             Form {
-                
+
                 HeroView()
                 
-                OperationView()
+                Section{
+                    OperationView()
+                }
                 
-                SnippetEditorView()
-                    .navigationTitle("Networking Keyboard")
-                    .navigationBarTitleDisplayMode(.inline)
+                Section(header:Text("Edit Snippets")){
+                    SnippetEditorView()
+                }
+                
+                Toggle(isOn: $displayOnboarding) {
+                    Text("Show Onboarding")
+                }
+                
             }
+            .navigationTitle("Networking Keyboard")
+            .navigationBarTitleDisplayMode(.inline)
+
         }
+        .popover(isPresented: $displayOnboarding) {
+            OnboardingView()
+                .presentationCompactAdaptation(.fullScreenCover)
+        }
+        
     }
 }
 

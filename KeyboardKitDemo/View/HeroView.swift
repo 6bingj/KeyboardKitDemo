@@ -27,7 +27,7 @@ struct HeroView: View {
                         .fontWeight(.bold)
                         .lineLimit(2)
                         .minimumScaleFactor(0.7)
-                    Text("This keyboard simplifies your online networking by allowing you to insert pre-saved snippets into anywhere you type. So you could reach out to anyone on LinkedIn app and send them necessary info effortlessly.")
+                    Text("This keyboard simplifies your online networking by allowing you to insert pre-saved snippets into anywhere you type. ")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .lineLimit(10)
