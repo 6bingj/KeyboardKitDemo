@@ -53,10 +53,6 @@ extension OnboardingView {
                 .padding()
             
             Spacer()
-
-            Text("This keyboard simplifies your online networking by allowing you to insert pre-saved snippets into anywhere you type. So you could reach out to anyone on LinkedIn and send them necessary info effortlessly(AI button is for showcasing UI only).")
-                .minimumScaleFactor(0.7)
-                .padding()
                         
             HStack {
                 Spacer()
@@ -85,6 +81,10 @@ extension OnboardingView {
                 Spacer()
 
             }
+            
+            Text("This keyboard simplifies your online networking by allowing you to insert pre-saved snippets into anywhere you type. So you could reach out to anyone on LinkedIn and send them necessary info effortlessly(AI button is for showcasing UI only).")
+                .minimumScaleFactor(0.7)
+                .padding()
             
             Spacer()
 

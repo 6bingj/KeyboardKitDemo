@@ -101,6 +101,7 @@ struct KeyboardToolbar: View {
             Label(title, systemImage: systemImage)
                 .padding(10)
                 .foregroundStyle(Color.gray)
+                .tint(Color.gray)
                 .bold()
 //                .background(Circle().fill(Color.gray))
 //                .foregroundColor(.white)
