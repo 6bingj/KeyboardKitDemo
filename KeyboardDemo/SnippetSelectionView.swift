@@ -10,7 +10,6 @@ import SwiftUI
 struct SnippetSelectionView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var textInserter: TextInserter
-//    @ObservedObject private var settings = SettingStore.shared
 
     var body: some View {
         VStack{
